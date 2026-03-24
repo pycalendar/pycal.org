@@ -370,10 +370,28 @@ main {
   border: 1px solid var(--stone-200);
 }
 
-.badge--dev {
-  background: #ede9fe;
-  color: var(--dev-accent);
-  border-color: #ddd6fe;
+.badge--stable {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.badge--poc {
+  background: #fffbeb;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.badge--unimplemented {
+  background: var(--stone-100);
+  color: var(--stone-600);
+  border-color: var(--stone-200);
+}
+
+.badge--sunset {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
 }
 
 .package p {
