@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -807,19 +809,19 @@ footer {
     background: var(--stone-50);
   }
 
-  .nav-toggle:checked ~ .nav-links {
+  .nav-toggle:checked~.nav-links {
     display: flex;
   }
 
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  .nav-toggle:checked+.nav-toggle-label span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
 
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  .nav-toggle:checked+.nav-toggle-label span:nth-child(2) {
     opacity: 0;
   }
 
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  .nav-toggle:checked+.nav-toggle-label span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
 }
