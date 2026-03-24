@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Python Calendaring Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f8f7f4">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">pycal</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/libraries/">Libraries</a></li>
+        <li><a href="/about/" class="active">About</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="header--slim">
+    <div class="container">
+      <p class="eyebrow">Python Calendaring Ecosystem</p>
+      <h1>About</h1>
+      <p class="hero-sub">What this project is, why it exists, and who funds it.</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <div class="prose">
+
+          <h2>What this is</h2>
+          <p>
+            Open source Python libraries that cover the calendaring stack top to bottom.
+            Reading and writing .ics files, computing recurring events, talking to CalDAV servers,
+            speaking JMAP, running CLI tools, integrating with Django.
+          </p>
+          <p>
+            No company behind any of it. The maintainers use these libraries in real projects.
+            Serious contributors get recognized and become part of the team.
+          </p>
+
+          <h2>Why it exists</h2>
+          <p>
+            Calendaring specs are old and full of gaps. iCalendar, CalDAV, and JMAP each have their own quirks,
+            and real servers add more on top. Most Python libraries in this space do too little
+            or get recurrences wrong in ways that only show up in production.
+          </p>
+          <p>
+            We test against real servers. We track compatibility for each one. When something breaks, we fix it.
+          </p>
+
+          <h2>Standards we implement</h2>
+          <ul class="spec-list">
+            <li>RFC 5545 — iCalendar</li>
+            <li>RFC 5546 — iTIP (scheduling)</li>
+            <li>RFC 4791 — CalDAV</li>
+            <li>RFC 6638 — CalDAV Scheduling Extensions</li>
+            <li>RFC 6764 — CalDAV/CardDAV Service Discovery</li>
+            <li>RFC 8984 — JSCalendar</li>
+            <li>draft-ietf-jmap-calendars — JMAP Calendaring</li>
+            <li>RFC 9610 — JMAP Contacts</li>
+          </ul>
+
+          <h2>Funding</h2>
+          <p>
+            Development is funded through <a href="https://nlnet.nl/core" target="_blank" rel="noopener">NGI Zero
+              Core</a>,
+            a grant program run by <a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a> with support from
+            the European Commission's <a href="https://ngi.eu" target="_blank" rel="noopener">Next Generation
+              Internet</a>
+            initiative. Details on the <a href="https://nlnet.nl/project/OpenWebCalendar-recurring" target="_blank"
+              rel="noopener">NLnet project page</a>.
+          </p>
+          <p>
+            The grant funds specific milestones. It doesn't change the licensing or ownership.
+            These libraries are open source and will stay that way.
+          </p>
+
+          <h2>License and governance</h2>
+          <p>
+            Everything is open source. Most packages use LGPL or Apache 2.0.
+            No foundation, no formal structure. Maintainers run their own packages
+            and coordinate directly when work spans multiple projects.
+          </p>
+          <p>
+            Contributions are welcome. See the <a href="/team/">team page</a> for who maintains what.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="nlnet-banner">
+          <div class="nlnet-text">
+            <p class="nlnet-label">Funded by</p>
+            <p class="nlnet-name">NLnet Foundation, NGI Zero Core</p>
+            <p class="nlnet-desc">This project is funded through NGI Zero Core, a fund established by NLnet with
+              financial support from the European Commission's Next Generation Internet program.</p>
+          </div>
+          <div class="nlnet-logos">
+            <a href="https://nlnet.nl" target="_blank" rel="noopener">
+              <img src="https://nlnet.nl/logo/banner.png" alt="NLnet foundation logo" height="40">
+            </a>
+            <a href="https://nlnet.nl/core" target="_blank" rel="noopener">
+              <img src="https://nlnet.nl/image/logos/NGI0_tag.svg" alt="NGI Zero Logo" height="40">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">pycal</a>
+          <p>The home for Python calendaring.<br>Libraries, tools, and specs, maintained in the open.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/libraries/">Libraries</a></li>
+            <li><a href="/team/">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a></li>
+            <li><a href="https://pypi.org/search/?q=icalendar" target="_blank" rel="noopener">PyPI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Python Calendaring Ecosystem.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>if (history.scrollRestoration) history.scrollRestoration = "manual"; window.scrollTo(0, 0);</script>
+</body>
+
+</html>

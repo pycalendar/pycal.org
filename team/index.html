@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team — Python Calendaring Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f8f7f4">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">pycal</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/libraries/">Libraries</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/" class="active">Team</a></li>
+        <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="header--slim">
+    <div class="container">
+      <p class="eyebrow">The people behind the libraries</p>
+      <h1>Team</h1>
+      <p class="hero-sub">
+        We maintain the libraries, review each other's code, and keep up with the specs.
+        New contributors are welcome.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="team-list">
+
+          <div class="member-card">
+            <div class="member-avatar">TB</div>
+            <div class="member-info">
+              <div class="member-header">
+                <h2 class="member-name">Tobias Brox</h2>
+                <a href="https://github.com/tobixen" class="member-github" target="_blank" rel="noopener">@tobixen</a>
+              </div>
+              <p class="member-bio">
+                The original. Tobias started building CalDAV tooling in 2013 because he needed it,
+                not because it was a project. That work became calendar-cli, then python-caldav, then
+                plann. Over a decade later he still maintains all three, and knows where every server
+                quirk is buried.
+              </p>
+              <div class="member-packages">
+                <span>python-caldav</span>
+                <span>plann</span>
+                <span>calendaring-client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="member-avatar">NK</div>
+            <div class="member-info">
+              <div class="member-header">
+                <h2 class="member-name">Nicco Kunzmann</h2>
+                <a href="https://github.com/niccokunzmann" class="member-github" target="_blank"
+                  rel="noopener">@niccokunzmann</a>
+              </div>
+              <p class="member-bio">
+                Without Nicco, most of this wouldn't exist as a coordinated effort. He maintains
+                icalendar, recurring-ical-events, and open-web-calendar, reviews code across all
+                packages, and has been the one keeping everything aligned — technically and
+                organizationally. He also brought most of this team together.
+              </p>
+              <div class="member-packages">
+                <span>icalendar</span>
+                <span>recurring-ical-events</span>
+                <span>open-web-calendar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="member-avatar">SB</div>
+            <div class="member-info">
+              <div class="member-header">
+                <h2 class="member-name">Sashank Bhamidi</h2>
+                <a href="https://github.com/SashankBhamidi" class="member-github" target="_blank"
+                  rel="noopener">@SashankBhamidi</a>
+                <a href="https://www.linkedin.com/in/sashankbhamidi/" class="member-linkedin" target="_blank"
+                  rel="noopener">LinkedIn</a>
+              </div>
+              <p class="member-bio">
+                Sashank is the CEO of BizCred and does open source on the side. He maintains
+                icalendar and icalendar-anonymizer, and built the JMAP implementation in
+                python-caldav from scratch.
+              </p>
+              <div class="member-packages">
+                <span>icalendar</span>
+                <span>calendaring-jmap</span>
+                <span>icalendar-anonymizer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="member-avatar">AH</div>
+            <div class="member-info">
+              <div class="member-header">
+                <h2 class="member-name">Abe Hanoka</h2>
+                <a href="https://github.com/abe-101" class="member-github" target="_blank" rel="noopener">@abe-101</a>
+              </div>
+              <p class="member-bio">
+                Abe runs actual production services on these libraries — MergeCal.org and
+                MyHebrewDates.com — which means he regularly hits bugs that only show up at scale
+                or with unusual calendar data. That's been genuinely useful. He maintains
+                python-mergecal and django-icalendar, and is also a maintainer of dj-stripe.
+              </p>
+              <div class="member-packages">
+                <span>mergecal</span>
+                <span>django-icalendar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="member-avatar">SP</div>
+            <div class="member-info">
+              <div class="member-header">
+                <h2 class="member-name">Steve Piercy</h2>
+                <a href="https://github.com/stevepiercy" class="member-github" target="_blank"
+                  rel="noopener">@stevepiercy</a>
+              </div>
+              <p class="member-bio">
+                Good documentation is the difference between a library people use and one they
+                abandon after an hour. Steve takes that seriously. He leads docs for this project
+                and for Plone, is bringing iCalendar support to Plone's event content types, and
+                maintains Sphinx tooling that several projects in this space depend on.
+              </p>
+              <div class="member-packages">
+                <span>Documentation</span>
+                <span>Sphinx tooling</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">pycal</a>
+          <p>The home for Python calendaring.<br>Libraries, tools, and specs, maintained in the open.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/libraries/">Libraries</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a></li>
+            <li><a href="https://pypi.org/search/?q=icalendar" target="_blank" rel="noopener">PyPI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Python Calendaring Ecosystem.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>if (history.scrollRestoration) history.scrollRestoration = "manual"; window.scrollTo(0, 0);</script>
+</body>
+
+</html>

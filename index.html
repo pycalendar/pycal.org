@@ -1,40 +1,152 @@
-<h1>Python Calendaring Ecosystem</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-Components:
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Calendaring Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f8f7f4">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
 
-<ul>
-  <li><a href="https://github.com/collective/icalendar">Python iCalendar library</a></li>
-  <li><a href="https://github.com/pycalendar/calendaring-client">Python Calendaring/Tasklist Client</a> - and backends:
-    <ul>
-      <li><a href="https://github.com/python-caldav/caldav">Python CalDAV Client Library</a></li>
-      <li><a href="https://github.com/python-caldav/caldav/blob/4308eae8b924cb2692359d50f99e4f552d82831e/docs/design/JMAP_ROADMAP.md">Python JMAP Calendaring Client</a></li>
-      <li>iCalendar Flat Files Backend</li>
-      <li>iCalendar Web Feed Backend</li>
-      <li>Potntially other Backends: <!-- todo: add links to the projects.  That's a simple AI-task? -->
-	<ul>
-	  <li>Gitea</li>
-	  <li>Vikunja</li>
-	  <li>Kanboard</li>
-	  <li>Taskwarrior</li>
-	  <li>Focalboard</li>
-	  <li>RequestTracker</li>
-	  <li>OpenProject</li>
-	  <li>GitLab</li>
-	  <li>Emacs org-mode</li>
-	  <li>Simple Markdown files</li>
-	  <li>NLNet Milestone report</li>
-	</ul>
-      </li>
-    </ul>
-    <li><a href="https://github.com/pycalendar/plann">plann - CLI consumer of the Calendaring client</a></li>
-  </li>
-  <li><a href="https://github.com/mergecal/icalendar-anonymizer">iCalendar Anonymizer</a></li>
-  <li><a href="https://github.com/pycalendar/icalendar-searcher">iCalendar Searcher</a></li>
-  <li><a href="https://github.com/niccokunzmann/python-recurring-ical-events">Python Recurring ICalendar Events and Tasks library</a></li>
-  <li><a href="https://github.com/mergecal/django-icalendar"</a>Django iCalendar</li>
-  <li><a href="https://github.com/python-caldav/caldav-server-tester">CalDAV server tester</a></li>
-  <li>...more?</li>
-</ul>
+<body>
 
-See also the <a href="https://open-web-calendar.quelltext.eu/">Open Web Calendar</a> project.
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">pycal</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/libraries/">Libraries</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <header>
+    <div class="container">
+      <h1>The Python Calendaring Ecosystem</h1>
+      <p class="hero-sub">
+        A collection of Python libraries for working with calendar data.
+        Parse .ics files, sync with CalDAV and JMAP servers, handle recurrences, run CLI tools, integrate with Django.
+      </p>
+      <div class="hero-actions">
+        <a href="/libraries/" class="btn btn-primary">Browse libraries</a>
+        <a href="/about/" class="btn btn-secondary">About the project</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <div class="overview-prose">
+          <p>
+            Calendaring specs are old and messy. RFC 5545, CalDAV, JMAP each have their own quirks,
+            and real-world servers pile more on top. Most Python libraries in this space skip the hard parts
+            or get recurrences quietly wrong.
+          </p>
+          <p>
+            This project is different. A small team who actually use these libraries, test against real servers,
+            and fix what breaks. No company behind it. Funded by NLnet through the NGI Zero Core fund.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Key libraries</h2>
+        <div class="package-grid">
+
+          <a href="https://icalendar.readthedocs.io/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">icalendar</span>
+              <span class="badge">Core</span>
+            </div>
+            <p>Parses and writes .ics files. Everything else in this ecosystem builds on top of it.</p>
+          </a>
+
+          <a href="https://caldav.readthedocs.io/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">python-caldav</span>
+              <span class="badge">Client</span>
+            </div>
+            <p>The only actively maintained Python CalDAV client. Tested against Nextcloud, Baikal, Cyrus, SOGo,
+              Fastmail, Google Calendar, and others.</p>
+          </a>
+
+          <a href="https://recurring-ical-events.readthedocs.io/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">recurring-ical-events</span>
+              <span class="badge">Core</span>
+            </div>
+            <p>Give it a date range, get back every event in it. Recurring events, exceptions, overrides. Gets the edge
+              cases right.</p>
+          </a>
+
+          <a href="https://github.com/pycalendar/calendaring-jmap" class="package package--dev" target="_blank"
+            rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">calendaring-jmap</span>
+              <span class="badge badge--dev">In Development</span>
+            </div>
+            <p>JMAP calendar support for Python. The implementation currently lives in python-caldav. This is where it
+              moves once extracted.</p>
+          </a>
+
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--stone-600);">
+          <a href="/libraries/">See all libraries</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">pycal</a>
+          <p>The home for Python calendaring.<br>Libraries, tools, and specs, maintained in the open.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/libraries/">Libraries</a></li>
+            <li><a href="/team/">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a></li>
+            <li><a href="https://pypi.org/search/?q=icalendar" target="_blank" rel="noopener">PyPI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Python Calendaring Ecosystem.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>if (history.scrollRestoration) history.scrollRestoration = "manual"; window.scrollTo(0, 0);</script>
+</body>
+
+</html>
