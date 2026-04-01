@@ -49,7 +49,7 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Utility libraries</h2>
+        <h2 class="section-title">Core libraries</h2>
         <div class="package-grid">
 
           <a href="https://icalendar.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -57,7 +57,20 @@
               <span class="pkg-name">icalendar</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Reads and writes .ics files. The base every other library builds on.</p>
+            <p>RFC 5545 compatible parser and generator for iCalendar (.ics) files. The foundation everything else in
+              this ecosystem builds on. Supports zoneinfo, dateutil, and pytz timezones. Used by python-caldav,
+              recurring-ical-events, open-web-calendar, and many other projects.</p>
+          </a>
+
+          <a href="https://caldav.readthedocs.io/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">python-caldav</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>The only actively maintained Python CalDAV client library. Supports both sync and async usage, scheduling
+              (RFC 6638), free/busy queries, managed attachments, and JMAP calendar access. Tested against Nextcloud,
+              Baikal, Cyrus IMAP, SOGo, Fastmail, Google Calendar, Stalwart, and others. Used directly by
+              HomeAssistant.</p>
           </a>
 
           <a href="https://recurring-ical-events.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -65,35 +78,9 @@
               <span class="pkg-name">recurring-ical-events</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Give it a date range, get back every event in it. Handles recurring events, exceptions, and overrides
-              correctly.</p>
-          </a>
-
-          <a href="https://icalendar-anonymizer.com/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">icalendar-anonymizer</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>Scrubs personal data out of .ics files without breaking the structure. Available as a Python library,
-              CLI, HTTP API, or web UI.</p>
-          </a>
-
-          <a href="https://github.com/pycalendar/icalendar-searcher" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">icalendar-searcher</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>Filter, sort, and expand calendar components on the client side. Useful when your server's query support
-              doesn't cover what you need.</p>
-          </a>
-
-          <a href="https://mergecal.readthedocs.io/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">python-mergecal</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>Merges multiple iCalendar feeds into one. Running in production at MergeCal.org and MyHebrewDates.com.
-            </p>
+            <p>Calculates recurrence times for events, TODOs, journal entries, and alarms from iCalendar data. Give it a
+              calendar and a date range, get back every occurrence — including exceptions and overrides. Used by
+              Nextcloud, Thunderbird, Android, and Eventyay.</p>
           </a>
 
         </div>
@@ -102,43 +89,68 @@
 
     <section class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Client/server communication</h2>
+        <h2 class="section-title">Utility libraries</h2>
         <div class="package-grid">
 
-          <a href="https://caldav.readthedocs.io/" class="package" target="_blank" rel="noopener">
+          <a href="https://icalendar-anonymizer.com/" class="package" target="_blank" rel="noopener">
             <div class="package-top">
-              <span class="pkg-name">python-caldav</span>
+              <span class="pkg-name">icalendar-anonymizer</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>The only actively maintained Python CalDAV client. Sync and async, scheduling, free/busy, JMAP. Tested
-              against Nextcloud, Baikal, Cyrus, SOGo, Fastmail, Google Calendar, and others.</p>
+            <p>Strips personal data from .ics files using hash-based anonymization — names, emails, locations, and
+              descriptions are replaced while date/time, recurrence patterns, and timezone data are preserved intact.
+              Available as a Python library, CLI, HTTP API, web UI, and Docker image.</p>
           </a>
 
-          <a href="https://github.com/pycalendar/calendaring-jmap" class="package" target="_blank" rel="noopener">
+          <a href="https://github.com/pycalendar/icalendar-searcher" class="package" target="_blank" rel="noopener">
             <div class="package-top">
-              <span class="pkg-name">calendaring-jmap</span>
-              <span class="badge badge--unimplemented">Not implemented</span>
+              <span class="pkg-name">icalendar-searcher</span>
+              <span class="badge badge--stable">Stable</span>
             </div>
-            <p>The future standalone Python JMAP calendar library. The implementation currently lives in python-caldav
-              and will be extracted here.</p>
+            <p>Client-side search, filtering, and sorting of iCalendar components. Handles property-based filtering,
+              date range queries, component type selection, category matching, and locale-aware collation. Fills in when
+              servers lack support for specific queries.</p>
           </a>
 
-          <a href="https://github.com/pycalendar/calendaring-client" class="package" target="_blank" rel="noopener">
+          <a href="https://mergecal.readthedocs.io/" class="package" target="_blank" rel="noopener">
             <div class="package-top">
-              <span class="pkg-name">calendaring-client</span>
-              <span class="badge badge--unimplemented">Not implemented</span>
+              <span class="pkg-name">python-mergecal</span>
+              <span class="badge badge--stable">Stable</span>
             </div>
-            <p>One API for CalDAV, JMAP, and raw .ics files. Point it at a URL and it figures out what it's talking to.
+            <p>Merges multiple iCalendar feeds and .ics files into a single calendar. Handles Google Calendar's
+              non-standard X-WR-TIMEZONE property, deduplicates events, and tracks additions and deletions across source
+              feeds. Available as both a Python library and CLI. Running in production at MergeCal.org and
+              MyHebrewDates.com.</p>
+          </a>
+
+          <a href="https://pypi.org/project/x-wr-timezone/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">x-wr-timezone</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>Fixes calendars exported by Google Calendar and similar tools that use the non-standard
+              <code>X-WR-TIMEZONE</code> property. Converts them to RFC 5545-compliant format so they display correctly
+              in strict parsers. Available as a Python library and CLI; supports piping with wget or curl.
             </p>
           </a>
 
-          <a href="https://open-web-calendar.quelltext.eu/" class="package" target="_blank" rel="noopener">
+          <a href="https://github.com/niccokunzmann/ics-query" class="package" target="_blank" rel="noopener">
             <div class="package-top">
-              <span class="pkg-name">open-web-calendar</span>
+              <span class="pkg-name">ics-query</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Turns iCalendar feeds into a calendar you can view in any browser. No account, no database, no tracking.
-              Configure with URL parameters and embed anywhere.</p>
+            <p>Query and filter RFC 5545 iCalendar files by time range, component type (VEVENT, VTODO, VJOURNAL,
+              VALARM), and timezone. Outputs valid .ics files. Available as a Python library, CLI, Windows .exe, and via
+              Homebrew on macOS. Supports piping and concatenating multiple calendar files.</p>
+          </a>
+
+          <a href="https://github.com/niccokunzmann/ical2jcal" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">ical2jcal</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>Converts between iCalendar (RFC 5545, .ics) and jCalendar (RFC 7265, JSON) formats. Available as a
+              Python library and CLI.</p>
           </a>
 
         </div>
@@ -147,34 +159,27 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Applications</h2>
+        <h2 class="section-title">Client/server communication</h2>
         <div class="package-grid">
 
-          <a href="https://plann.no/" class="package" target="_blank" rel="noopener">
+          <a href="https://github.com/pycalendar/calendaring-jmap" class="package" target="_blank" rel="noopener">
             <div class="package-top">
-              <span class="pkg-name">plann</span>
-              <span class="badge badge--stable">Stable</span>
+              <span class="pkg-name">calendaring-jmap</span>
+              <span class="badge badge--unimplemented">Planned</span>
             </div>
-            <p>CLI and TUI for managing calendars and tasks. Talks directly to your CalDAV server, no local sync.
-              Successor to calendar-cli.</p>
+            <p>A standalone Python JMAP calendar library. JMAP calendar support — scheduling, sharing, free/busy,
+              attachments, contacts integration, and push notifications — currently lives in python-caldav and will be
+              published here as an independently installable package.</p>
           </a>
 
-          <a href="https://open-web-calendar.quelltext.eu/" class="package" target="_blank" rel="noopener">
+          <a href="https://github.com/pycalendar/calendaring-client" class="package" target="_blank" rel="noopener">
             <div class="package-top">
-              <span class="pkg-name">open-web-calendar</span>
-              <span class="badge badge--stable">Stable</span>
+              <span class="pkg-name">calendaring-client</span>
+              <span class="badge badge--unimplemented">Planned</span>
             </div>
-            <p>Turns iCalendar feeds into a calendar you can view in any browser. No account, no database, no tracking.
-              Configure with URL parameters and embed anywhere.</p>
-          </a>
-
-          <a href="https://github.com/pycalendar/calendar-cli" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">calendar-cli</span>
-              <span class="badge badge--sunset">Sunset</span>
-            </div>
-            <p>The original CalDAV CLI. Still maintained for backward compatibility. New users should use plann instead.
-            </p>
+            <p>A unified Python API for CalDAV, JMAP, and raw iCalendar feeds. Point it at a URL and it detects what
+              it's talking to — no need to know whether the backend is CalDAV, JMAP, or a plain .ics file. First-class
+              task support alongside events.</p>
           </a>
 
         </div>
@@ -183,25 +188,87 @@
 
     <section class="section section-alt">
       <div class="container">
+        <h2 class="section-title">Applications</h2>
+        <div class="package-grid">
+
+          <a href="https://open-web-calendar.quelltext.eu/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">open-web-calendar</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>Turns iCalendar feeds into a customizable calendar you can embed in any website. No account, no database,
+              no tracking. Supports multiple sources, per-calendar styling, day/week/month/agenda views, multi-language,
+              and timezone selection. Self-hostable via Docker, Python package, or direct deployment.</p>
+          </a>
+
+          <a href="https://plann.no/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">plann</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>CLI and TUI for managing calendars and tasks directly against a CalDAV server — no local sync, no local
+              storage. Add events, browse agendas, manage todos, postpone tasks, operate across multiple calendars
+              simultaneously. Supports JSON/YAML config, custom output templates, and explicit timezone handling.
+              Successor to calendar-cli.</p>
+          </a>
+
+          <a href="https://github.com/tobixen/calendar-cli" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">calendar-cli</span>
+              <span class="badge badge--sunset">Sunset</span>
+            </div>
+            <p>The original CalDAV CLI, maintained for backward compatibility. Mature and production-ready. New users
+              should start with plann instead.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Tooling</h2>
+        <div class="package-grid package-grid--two">
+
+          <a href="https://github.com/python-caldav/caldav-server-tester" class="package" target="_blank"
+            rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">caldav-server-tester</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>Probes a CalDAV server and reports which features and RFC requirements it supports. Checks calendar
+              creation, event/task/journal persistence, time-range search, text search, synchronization reports (RFC
+              6578), free/busy queries, principal discovery (RFC 5397), UID handling, and timezone support. Outputs
+              JSON, YAML, or compatibility hints.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
         <h2 class="section-title">Integrations</h2>
         <div class="package-grid package-grid--two">
 
-          <a href="https://github.com/mergecal/django-icalendar/" class="package" target="_blank" rel="noopener">
+          <a href="https://django-icalendar.readthedocs.io/" class="package" target="_blank" rel="noopener">
             <div class="package-top">
               <span class="pkg-name">django-icalendar</span>
               <span class="badge badge--poc">Proof of concept</span>
             </div>
-            <p>Django models for storing and exporting RFC 5545 iCalendar data. Brings CalendarModel, EventModel, forms,
-              and admin integration to Django projects.</p>
+            <p>Django models for storing and exporting RFC 5545 iCalendar data. Provides CalendarModel and EventModel
+              with dual date/datetime field patterns, recurrence rule storage, organizer and attendee support, and
+              Django
+              admin integration.</p>
           </a>
 
           <a href="https://github.com/pycalendar/calendaring-client" class="package" target="_blank" rel="noopener">
             <div class="package-top">
               <span class="pkg-name">calendaring-client</span>
-              <span class="badge badge--unimplemented">Not implemented</span>
+              <span class="badge badge--unimplemented">Planned</span>
             </div>
-            <p>One API for CalDAV, JMAP, and raw .ics files. Point it at a URL and it figures out what it's talking to.
-            </p>
+            <p>A single consistent API for applications needing to talk to CalDAV servers, JMAP servers, or read plain
+              .ics files — without knowing which backend is behind a URL.</p>
           </a>
 
         </div>

@@ -60,7 +60,7 @@
           </p>
           <p>
             This project is different. A small team who actually use these libraries, test against real servers,
-            and fix what breaks. No company behind it. Funded by NLnet through the NGI Zero Core fund.
+            and fix what breaks. No company behind it. Funded by NLnet through the NGI Zero program.
           </p>
         </div>
       </div>
@@ -76,7 +76,8 @@
               <span class="pkg-name">icalendar</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Parses and writes .ics files. Everything else in this ecosystem builds on top of it.</p>
+            <p>RFC 5545 parser and generator for .ics files. The foundation every other library in this ecosystem
+              builds on.</p>
           </a>
 
           <a href="https://caldav.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -84,8 +85,8 @@
               <span class="pkg-name">python-caldav</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>The only actively maintained Python CalDAV client. Tested against Nextcloud, Baikal, Cyrus, SOGo,
-              Fastmail, Google Calendar, and others.</p>
+            <p>The only actively maintained Python CalDAV client. Sync and async, scheduling, free/busy, and JMAP.
+              Used directly by HomeAssistant.</p>
           </a>
 
           <a href="https://recurring-ical-events.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -93,22 +94,39 @@
               <span class="pkg-name">recurring-ical-events</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Give it a date range, get back every event in it. Handles recurring events, exceptions, and overrides
-              correctly.</p>
+            <p>Expands recurring events, TODOs, journals, and alarms for a given date range. Used by Nextcloud,
+              Thunderbird, and Android.</p>
           </a>
 
-          <a href="https://github.com/pycalendar/calendaring-jmap" class="package" target="_blank" rel="noopener">
+          <a href="https://open-web-calendar.quelltext.eu/" class="package" target="_blank" rel="noopener">
             <div class="package-top">
-              <span class="pkg-name">calendaring-jmap</span>
-              <span class="badge badge--unimplemented">Not implemented</span>
+              <span class="pkg-name">open-web-calendar</span>
+              <span class="badge badge--stable">Stable</span>
             </div>
-            <p>The future standalone Python JMAP calendar library. The implementation currently lives in python-caldav
-              and will be extracted here.</p>
+            <p>Turns iCalendar feeds into an embeddable web calendar. No account, no database, no tracking.
+              Self-hostable.</p>
+          </a>
+
+          <a href="https://icalendar-anonymizer.com/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">icalendar-anonymizer</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>Strips personal data from .ics files while preserving all technical properties. Library, CLI, HTTP
+              API, and web UI.</p>
+          </a>
+
+          <a href="https://plann.no/" class="package" target="_blank" rel="noopener">
+            <div class="package-top">
+              <span class="pkg-name">plann</span>
+              <span class="badge badge--stable">Stable</span>
+            </div>
+            <p>CLI and TUI for managing calendars and tasks directly on a CalDAV server. No local sync required.</p>
           </a>
 
         </div>
         <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--stone-600);">
-          <a href="/libraries">See all libraries</a>
+          <a href="/libraries">See all libraries →</a>
         </p>
       </div>
     </section>
