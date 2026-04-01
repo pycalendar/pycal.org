@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libraries — Python Calendaring Ecosystem</title>
+  <title>Software — Python Web Calendaring Ecosystem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -26,7 +26,7 @@
       </label>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/libraries" class="active">Libraries</a></li>
+        <li><a href="/libraries" class="active">Software</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/team">Team</a></li>
         <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
@@ -36,11 +36,10 @@
 
   <header class="header--slim">
     <div class="container">
-      <p class="eyebrow">Python Calendaring Ecosystem</p>
-      <h1>Libraries</h1>
+      <p class="eyebrow">Python Web Calendaring Ecosystem</p>
+      <h1>Software</h1>
       <p class="hero-sub">
-        All packages maintained by this team. A library can appear in more than one category.
-        Badges show stability status.
+        Everything we maintain. Badges show stability status.
       </p>
     </div>
   </header>
@@ -49,7 +48,7 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Core libraries</h2>
+        <h2 class="section-title">Core</h2>
         <div class="package-grid">
 
           <a href="https://icalendar.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -57,9 +56,7 @@
               <span class="pkg-name">icalendar</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>RFC 5545 compatible parser and generator for iCalendar (.ics) files. The foundation everything else in
-              this ecosystem builds on. Supports zoneinfo, dateutil, and pytz timezones. Used by python-caldav,
-              recurring-ical-events, open-web-calendar, and many other projects.</p>
+            <p>RFC 5545 parser and generator for .ics files. The foundation everything else in this ecosystem builds on.</p>
           </a>
 
           <a href="https://caldav.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -67,10 +64,7 @@
               <span class="pkg-name">python-caldav</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>The only actively maintained Python CalDAV client library. Supports both sync and async usage, scheduling
-              (RFC 6638), free/busy queries, managed attachments, and JMAP calendar access. Tested against Nextcloud,
-              Baikal, Cyrus IMAP, SOGo, Fastmail, Google Calendar, Stalwart, and others. Used directly by
-              HomeAssistant.</p>
+            <p>The only actively maintained Python CalDAV client. Sync and async, scheduling, free/busy, JMAP. Tested against a dozen real servers. Used by HomeAssistant.</p>
           </a>
 
           <a href="https://recurring-ical-events.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -78,9 +72,7 @@
               <span class="pkg-name">recurring-ical-events</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Calculates recurrence times for events, TODOs, journal entries, and alarms from iCalendar data. Give it a
-              calendar and a date range, get back every occurrence — including exceptions and overrides. Used by
-              Nextcloud, Thunderbird, Android, and Eventyay.</p>
+            <p>Give it a calendar and a date range, get back every occurrence — exceptions and overrides included. Used by Nextcloud, Thunderbird, and Android.</p>
           </a>
 
         </div>
@@ -89,7 +81,7 @@
 
     <section class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Utility libraries</h2>
+        <h2 class="section-title">Utilities</h2>
         <div class="package-grid">
 
           <a href="https://icalendar-anonymizer.com/" class="package" target="_blank" rel="noopener">
@@ -97,9 +89,7 @@
               <span class="pkg-name">icalendar-anonymizer</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Strips personal data from .ics files using hash-based anonymization — names, emails, locations, and
-              descriptions are replaced while date/time, recurrence patterns, and timezone data are preserved intact.
-              Available as a Python library, CLI, HTTP API, web UI, and Docker image.</p>
+            <p>Strip names, emails, and locations from .ics files while keeping all timing and recurrence data intact. Library, CLI, HTTP API, web UI, and Docker image.</p>
           </a>
 
           <a href="https://github.com/pycalendar/icalendar-searcher" class="package" target="_blank" rel="noopener">
@@ -107,9 +97,7 @@
               <span class="pkg-name">icalendar-searcher</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Client-side search, filtering, and sorting of iCalendar components. Handles property-based filtering,
-              date range queries, component type selection, category matching, and locale-aware collation. Fills in when
-              servers lack support for specific queries.</p>
+            <p>Client-side search and filtering for iCalendar data — for when the server doesn't support the query you need.</p>
           </a>
 
           <a href="https://mergecal.readthedocs.io/" class="package" target="_blank" rel="noopener">
@@ -117,10 +105,7 @@
               <span class="pkg-name">python-mergecal</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Merges multiple iCalendar feeds and .ics files into a single calendar. Handles Google Calendar's
-              non-standard X-WR-TIMEZONE property, deduplicates events, and tracks additions and deletions across source
-              feeds. Available as both a Python library and CLI. Running in production at MergeCal.org and
-              MyHebrewDates.com.</p>
+            <p>Merge multiple iCalendar feeds into one. Handles Google Calendar's timezone quirks, deduplicates events. Running in production at MergeCal.org and MyHebrewDates.com.</p>
           </a>
 
           <a href="https://pypi.org/project/x-wr-timezone/" class="package" target="_blank" rel="noopener">
@@ -128,10 +113,7 @@
               <span class="pkg-name">x-wr-timezone</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Fixes calendars exported by Google Calendar and similar tools that use the non-standard
-              <code>X-WR-TIMEZONE</code> property. Converts them to RFC 5545-compliant format so they display correctly
-              in strict parsers. Available as a Python library and CLI; supports piping with wget or curl.
-            </p>
+            <p>Fixes the non-standard <code>X-WR-TIMEZONE</code> property that Google Calendar exports, so .ics files work correctly in strict parsers.</p>
           </a>
 
           <a href="https://github.com/niccokunzmann/ics-query" class="package" target="_blank" rel="noopener">
@@ -139,9 +121,7 @@
               <span class="pkg-name">ics-query</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Query and filter RFC 5545 iCalendar files by time range, component type (VEVENT, VTODO, VJOURNAL,
-              VALARM), and timezone. Outputs valid .ics files. Available as a Python library, CLI, Windows .exe, and via
-              Homebrew on macOS. Supports piping and concatenating multiple calendar files.</p>
+            <p>Query .ics files by time range and component type from the command line. Outputs valid .ics. Available via Homebrew, Windows .exe, or pip.</p>
           </a>
 
           <a href="https://github.com/niccokunzmann/ical2jcal" class="package" target="_blank" rel="noopener">
@@ -149,7 +129,7 @@
               <span class="pkg-name">ical2jcal</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Converts between iCalendar (RFC 5545, .ics) and jCalendar (RFC 7265, JSON) formats. Available as a
+            <p>Converts between iCalendar (RFC 5545, .ics) and jCal (RFC 7265, JSON) formats. Available as a
               Python library and CLI.</p>
           </a>
 
@@ -167,9 +147,7 @@
               <span class="pkg-name">calendaring-jmap</span>
               <span class="badge badge--unimplemented">Planned</span>
             </div>
-            <p>A standalone Python JMAP calendar library. JMAP calendar support — scheduling, sharing, free/busy,
-              attachments, contacts integration, and push notifications — currently lives in python-caldav and will be
-              published here as an independently installable package.</p>
+            <p>JMAP calendar support as a standalone package — scheduling, free/busy, attachments, push notifications. Currently part of python-caldav, being extracted here.</p>
           </a>
 
           <a href="https://github.com/pycalendar/calendaring-client" class="package" target="_blank" rel="noopener">
@@ -177,9 +155,7 @@
               <span class="pkg-name">calendaring-client</span>
               <span class="badge badge--unimplemented">Planned</span>
             </div>
-            <p>A unified Python API for CalDAV, JMAP, and raw iCalendar feeds. Point it at a URL and it detects what
-              it's talking to — no need to know whether the backend is CalDAV, JMAP, or a plain .ics file. First-class
-              task support alongside events.</p>
+            <p>One API for CalDAV, JMAP, and plain .ics feeds. Point it at a URL — it figures out the rest.</p>
           </a>
 
         </div>
@@ -196,9 +172,7 @@
               <span class="pkg-name">open-web-calendar</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Turns iCalendar feeds into a customizable calendar you can embed in any website. No account, no database,
-              no tracking. Supports multiple sources, per-calendar styling, day/week/month/agenda views, multi-language,
-              and timezone selection. Self-hostable via Docker, Python package, or direct deployment.</p>
+            <p>Embed any iCalendar feed as a web calendar. No account, no database, no tracking. Self-hostable.</p>
           </a>
 
           <a href="https://plann.no/" class="package" target="_blank" rel="noopener">
@@ -206,10 +180,7 @@
               <span class="pkg-name">plann</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>CLI and TUI for managing calendars and tasks directly against a CalDAV server — no local sync, no local
-              storage. Add events, browse agendas, manage todos, postpone tasks, operate across multiple calendars
-              simultaneously. Supports JSON/YAML config, custom output templates, and explicit timezone handling.
-              Successor to calendar-cli.</p>
+            <p>CLI and TUI for calendars and tasks, live against a CalDAV server. No local sync, no local storage. Successor to calendar-cli.</p>
           </a>
 
           <a href="https://github.com/tobixen/calendar-cli" class="package" target="_blank" rel="noopener">
@@ -217,8 +188,7 @@
               <span class="pkg-name">calendar-cli</span>
               <span class="badge badge--sunset">Sunset</span>
             </div>
-            <p>The original CalDAV CLI, maintained for backward compatibility. Mature and production-ready. New users
-              should start with plann instead.</p>
+            <p>The original CalDAV CLI. Still works, still maintained. New users should start with plann.</p>
           </a>
 
         </div>
@@ -236,10 +206,7 @@
               <span class="pkg-name">caldav-server-tester</span>
               <span class="badge badge--stable">Stable</span>
             </div>
-            <p>Probes a CalDAV server and reports which features and RFC requirements it supports. Checks calendar
-              creation, event/task/journal persistence, time-range search, text search, synchronization reports (RFC
-              6578), free/busy queries, principal discovery (RFC 5397), UID handling, and timezone support. Outputs
-              JSON, YAML, or compatibility hints.</p>
+            <p>Point it at a CalDAV server and get a full report of what it actually supports — not just what the docs claim.</p>
           </a>
 
         </div>
@@ -256,10 +223,7 @@
               <span class="pkg-name">django-icalendar</span>
               <span class="badge badge--poc">Proof of concept</span>
             </div>
-            <p>Django models for storing and exporting RFC 5545 iCalendar data. Provides CalendarModel and EventModel
-              with dual date/datetime field patterns, recurrence rule storage, organizer and attendee support, and
-              Django
-              admin integration.</p>
+            <p>Django models for iCalendar data — events, recurrences, attendees, and admin integration out of the box.</p>
           </a>
 
           <a href="https://github.com/pycalendar/calendaring-client" class="package" target="_blank" rel="noopener">
@@ -267,8 +231,7 @@
               <span class="pkg-name">calendaring-client</span>
               <span class="badge badge--unimplemented">Planned</span>
             </div>
-            <p>A single consistent API for applications needing to talk to CalDAV servers, JMAP servers, or read plain
-              .ics files — without knowing which backend is behind a URL.</p>
+            <p>One API for CalDAV, JMAP, and plain .ics feeds. Point it at a URL — it figures out the rest.</p>
           </a>
 
         </div>
@@ -282,7 +245,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="footer-logo">pycal</a>
-          <p>The home for Python calendaring.<br>Libraries, tools, and specs, maintained in the open.</p>
+          <p>The home for Python calendaring.<br>Software, tools, and specs, maintained in the open.</p>
         </div>
         <div class="footer-col">
           <h4>Project</h4>
@@ -302,7 +265,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>Python Calendaring Ecosystem.</p>
+        <p>Python Web Calendaring Ecosystem.</p>
       </div>
     </div>
   </footer>
