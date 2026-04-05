@@ -1,167 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python Web Calendaring Ecosystem</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#f8f7f4">
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-
-<body>
-
-  <nav>
-    <div class="container nav-inner">
-      <a href="/" class="nav-logo">pycal</a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </label>
-      <ul class="nav-links">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/libraries">Software</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/team">Team</a></li>
-        <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
+<header>
+  <div class="container">
+    <h1>The Python Web Calendaring Ecosystem</h1>
+    <p class="hero-sub">
+      Calendaring is harder than it looks. We do it properly.
+    </p>
+    <div class="hero-actions">
+      <a href="/about" class="btn btn-secondary">About the project</a>
+      <a href="/software" class="btn btn-primary">Browse software</a>
     </div>
-  </nav>
+  </div>
+</header>
 
-  <header>
+<main>
+
+  <section class="section">
     <div class="container">
-      <h1>The Python Web Calendaring Ecosystem</h1>
-      <p class="hero-sub">
-        Calendaring is harder than it looks. We do it properly.
-      </p>
-      <div class="hero-actions">
-        <a href="/libraries" class="btn btn-primary">Browse software</a>
-        <a href="/about" class="btn btn-secondary">About the project</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="section">
-      <div class="container">
-        <div class="overview-prose">
-          <p>
-            RFC 5545, CalDAV, JMAP: each one has quirks, and real servers pile on more.
-            Most Python libraries quietly get recurrences wrong or skip the hard parts entirely.
-          </p>
-          <p>
-            We don't. Small team, real servers, no company behind it. Funded by <a href="https://nlnet.nl/NGI0" target="_blank" rel="noopener">NLnet NGI Zero</a>.
-            Parts of this software run in millions of installations; Nextcloud, Thunderbird, and Android all ship it.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Key software</h2>
-        <div class="package-grid">
-
-          <a href="https://icalendar.readthedocs.io/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">icalendar</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>RFC 5545 parser and generator for .ics files. The foundation every other package in this ecosystem
-              builds on.</p>
-          </a>
-
-          <a href="https://caldav.readthedocs.io/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">python-caldav</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>The only actively maintained Python CalDAV client. Sync and async, scheduling, free/busy, and JMAP.
-              Used directly by HomeAssistant.</p>
-          </a>
-
-          <a href="https://recurring-ical-events.readthedocs.io/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">recurring-ical-events</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>Expands recurring events, TODOs, journals, and alarms for a given date range. Used by Nextcloud,
-              Thunderbird, and Android.</p>
-          </a>
-
-          <a href="https://open-web-calendar.quelltext.eu/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">open-web-calendar</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>Turns iCalendar feeds into an embeddable web calendar. No account, no database, no tracking.
-              Self-hostable.</p>
-          </a>
-
-          <a href="https://icalendar-anonymizer.com/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">icalendar-anonymizer</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>Strips personal data from .ics files while preserving all technical properties. Library, CLI, HTTP
-              API, and web UI.</p>
-          </a>
-
-          <a href="https://plann.no/" class="package" target="_blank" rel="noopener">
-            <div class="package-top">
-              <span class="pkg-name">plann</span>
-              <span class="badge badge--stable">Stable</span>
-            </div>
-            <p>CLI and TUI for managing calendars and tasks directly on a CalDAV server. No local sync required.</p>
-          </a>
-
-        </div>
-        <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--stone-600);">
-          <a href="/libraries">See all software →</a>
+      <div class="overview-prose">
+        <p>
+          RFC 5545, CalDAV, JMAP: each one has quirks, and real servers pile on more.
+          Most Python libraries quietly get recurrences wrong or skip the hard parts entirely.
+        </p>
+        <p>
+          We don't. Small team, real servers, no company behind it. Funded by <a href="https://nlnet.nl/NGI0"
+            target="_blank" rel="noopener">NLnet NGI Zero</a>.
+          Parts of this software run in millions of installations; Nextcloud, Thunderbird, and Android all ship it.
         </p>
       </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="footer-logo">pycal</a>
-          <p>The home for Python calendaring.<br>Software, tools, and specs, maintained in the open.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Project</h4>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/libraries">Software</a></li>
-            <li><a href="/team">Team</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Community</h4>
-          <ul>
-            <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a></li>
-            <li><a href="https://pypi.org/search/?q=icalendar" target="_blank" rel="noopener">PyPI</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Python Web Calendaring Ecosystem.</p>
-      </div>
     </div>
-  </footer>
+  </section>
 
-  <script>if (history.scrollRestoration) history.scrollRestoration = "manual"; window.scrollTo(0, 0);</script>
-</body>
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Key software</h2>
+      <div class="package-grid">
 
-</html>
+        {% for pkg in site.data.packages %}
+        {% if pkg.homepage_featured %}
+        {% include package_card.html %}
+        {% endif %}
+        {% endfor %}
+
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--stone-600);">
+        <a href="/software">See all software →</a>
+      </p>
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,30 @@
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">pycal</a>
+        <p>The home for Python calendaring.<br>Software, tools, and specs, maintained in the open.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          {% unless page.url contains "/about" %}<li><a href="/about">About</a></li>{% endunless %}
+          {% unless page.url == "/" %}<li><a href="/">Home</a></li>{% endunless %}
+          {% unless page.url contains "/software" %}<li><a href="/software">Software</a></li>{% endunless %}
+          {% unless page.url contains "/team" %}<li><a href="/team">Team</a></li>{% endunless %}
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a></li>
+          <li><a href="https://pypi.org/search/?q=icalendar" target="_blank" rel="noopener">PyPI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Python Web Calendaring Ecosystem.</p>
+    </div>
+  </div>
+</footer>

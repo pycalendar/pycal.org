@@ -1,0 +1,26 @@
+- id: "RFC 5545"
+  name: iCalendar
+- id: "RFC 5546"
+  name: iTIP (scheduling)
+- id: "RFC 4791"
+  name: CalDAV
+- id: "RFC 3744"
+  name: WebDAV Access Control (ACL)
+- id: "RFC 6638"
+  name: CalDAV Scheduling Extensions
+- id: "RFC 6764"
+  name: CalDAV/CardDAV Service Discovery
+- id: "RFC 7953"
+  name: Calendar Availability
+- id: "RFC 7986"
+  name: New Properties for iCalendar
+- id: "RFC 8607"
+  name: Managed Attachments
+- id: "RFC 5689"
+  name: Extended MKCOL
+- id: "RFC 8984"
+  name: JSCalendar
+- id: "draft-ietf-jmap-calendars"
+  name: JMAP Calendaring (RFC Editor Queue)
+- id: "RFC 9610"
+  name: JMAP Contacts

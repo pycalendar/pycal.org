@@ -1,0 +1,49 @@
+- name: Nicco Kunzmann
+  github: niccokunzmann
+  linkedin:
+  avatar: NK
+  bio: "Nicco holds this together. He maintains more packages than anyone else, reviews code across the whole ecosystem, brought most of this team together, and is the primary contact for NLnet. The coordinated effort you see here is largely his doing."
+  packages:
+    - icalendar
+    - recurring-ical-events
+    - open-web-calendar
+    - ical2jcal
+    - ics-query
+    - x-wr-timezone
+
+- name: Tobias Brox
+  github: tobixen
+  linkedin:
+  avatar: TB
+  bio: "The original. Tobias started building CalDAV tooling in 2013 because he needed it, not because it was a project. That work became calendar-cli, then python-caldav, then plann. Over a decade later he still maintains all three and knows where every server quirk is buried."
+  packages:
+    - python-caldav
+    - plann
+    - calendar-cli
+
+- name: Sashank Bhamidi
+  github: SashankBhamidi
+  linkedin: https://www.linkedin.com/in/sashankbhamidi/
+  avatar: SB
+  bio: "Sashank is the Founder of BizCred and does open source on the side. He built JMAP calendar support into python-caldav from scratch, and maintains icalendar and icalendar-anonymizer."
+  packages:
+    - icalendar
+    - icalendar-anonymizer
+
+- name: Abe Hanoka
+  github: abe-101
+  linkedin: https://linkedin.com/in/abe101
+  avatar: AH
+  bio: "Abe runs <a href=\"https://mergecal.org/\" target=\"_blank\" rel=\"noopener\">MergeCal.org</a> and <a href=\"https://myhebrewdates.com/\" target=\"_blank\" rel=\"noopener\">MyHebrewDates.com</a> on these packages, which means he hits the bugs that only show up at scale. He maintains python-mergecal and django-icalendar, and is also a maintainer of dj-stripe."
+  packages:
+    - python-mergecal
+    - django-icalendar
+
+- name: Steve Piercy
+  github: stevepiercy
+  linkedin:
+  avatar: SP
+  bio: "Steve leads docs for this project and for Plone, is bringing iCalendar support to Plone's event content types, and maintains sphinxcontrib-httpdomain, used across the Python documentation community for REST API docs."
+  packages:
+    - Documentation
+    - sphinxcontrib-httpdomain

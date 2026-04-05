@@ -1,0 +1,144 @@
+- name: icalendar
+  url: https://icalendar.readthedocs.io/
+  badge: stable
+  badge_label: Stable
+  description: "RFC 5545 parser and generator for .ics files. The foundation every other package in this ecosystem builds on."
+  categories:
+    - core
+  homepage_featured: true
+
+- name: python-caldav
+  url: https://caldav.readthedocs.io/
+  badge: stable
+  badge_label: Stable
+  description: "The only actively maintained Python CalDAV client. Sync and async, scheduling, free/busy, JMAP. Tested against a dozen real servers. Used by Home Assistant."
+  categories:
+    - core
+  homepage_featured: true
+
+- name: recurring-ical-events
+  url: https://recurring-ical-events.readthedocs.io/
+  badge: stable
+  badge_label: Stable
+  description: "Give it a calendar and a date range, get back every occurrence; exceptions and overrides included. Used by Nextcloud, Thunderbird, and Android."
+  categories:
+    - core
+  homepage_featured: true
+
+- name: icalendar-anonymizer
+  url: https://icalendar-anonymizer.com/
+  badge: stable
+  badge_label: Stable
+  description: "Strip names, emails, and locations from .ics files while keeping all timing and recurrence data intact. Library, CLI, HTTP API, web UI, and Docker image."
+  categories:
+    - utilities
+  homepage_featured: true
+
+- name: icalendar-searcher
+  url: https://github.com/pycalendar/icalendar-searcher
+  badge: stable
+  badge_label: Stable
+  description: "Client-side search and filtering for iCalendar data, for when the server doesn't support the query you need."
+  categories:
+    - utilities
+  homepage_featured: false
+
+- name: python-mergecal
+  url: https://mergecal.readthedocs.io/
+  badge: stable
+  badge_label: Stable
+  description: "Merge multiple iCalendar feeds into one. Handles Google Calendar's timezone quirks, deduplicates events. Running in production at MergeCal.org and MyHebrewDates.com."
+  categories:
+    - utilities
+  homepage_featured: false
+
+- name: x-wr-timezone
+  url: https://pypi.org/project/x-wr-timezone/
+  badge: stable
+  badge_label: Stable
+  description: "Fixes the non-standard X-WR-TIMEZONE property that Google Calendar exports, so .ics files work correctly in strict parsers."
+  categories:
+    - utilities
+  homepage_featured: false
+
+- name: ics-query
+  url: https://github.com/niccokunzmann/ics-query
+  badge: stable
+  badge_label: Stable
+  description: "Query .ics files by time range and component type from the command line. Outputs valid .ics. Available via Homebrew, Windows .exe, or pip."
+  categories:
+    - utilities
+  homepage_featured: false
+
+- name: ical2jcal
+  url: https://github.com/niccokunzmann/ical2jcal
+  badge: stable
+  badge_label: Stable
+  description: "Converts between iCalendar (RFC 5545, .ics) and jCal (RFC 7265, JSON) formats. Available as a Python library and CLI."
+  categories:
+    - utilities
+  homepage_featured: false
+
+- name: calendaring-jmap
+  url: https://github.com/pycalendar/calendaring-jmap
+  badge: planned
+  badge_label: Planned
+  description: "JMAP calendar support as a standalone package: scheduling, free/busy, attachments, push notifications. Currently part of python-caldav, being extracted here."
+  categories:
+    - client-server
+  homepage_featured: false
+
+- name: calendaring-client
+  url: https://github.com/pycalendar/calendaring-client
+  badge: planned
+  badge_label: Planned
+  description: "One API for CalDAV, JMAP, and plain .ics feeds. Point it at a URL and it figures out the rest."
+  categories:
+    - client-server
+    - integrations
+  homepage_featured: false
+
+- name: open-web-calendar
+  url: https://open-web-calendar.quelltext.eu/
+  badge: stable
+  badge_label: Stable
+  description: "Embed any iCalendar feed as a web calendar. No account, no database, no tracking. Self-hostable."
+  categories:
+    - applications
+  homepage_featured: true
+
+- name: plann
+  url: https://plann.no/
+  badge: stable
+  badge_label: Stable
+  description: "CLI and TUI for calendars and tasks, live against a CalDAV server. No local sync, no local storage. Successor to calendar-cli."
+  categories:
+    - applications
+  homepage_featured: true
+
+- name: calendar-cli
+  url: https://github.com/tobixen/calendar-cli
+  badge: sunset
+  badge_label: Sunset
+  description: "The original CalDAV CLI. Still works, still maintained. New users should start with plann."
+  categories:
+    - applications
+  homepage_featured: false
+
+- name: caldav-server-tester
+  url: https://github.com/python-caldav/caldav-server-tester
+  badge: stable
+  badge_label: Stable
+  description: "Point it at a CalDAV server and get a full report of what it actually supports, not just what the docs claim."
+  categories:
+    - tooling
+  homepage_featured: false
+
+- name: django-icalendar
+  url: https://django-icalendar.readthedocs.io/
+  badge: poc
+  badge_label: Proof of concept
+  description: "Django models for iCalendar data: events, recurrences, attendees, and admin integration out of the box."
+  categories:
+    - integrations
+  homepage_featured: false
