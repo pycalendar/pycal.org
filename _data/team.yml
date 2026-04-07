@@ -43,7 +43,7 @@
   github: stevepiercy
   linkedin:
   avatar: SP
-  bio: "Steve is the documentation lead for this project and for Plone, is improving iCalendar support to Plone's event content types, and maintains sphinxcontrib-httpdomain, used across the Python community for HTTP API documentation."
+  bio: "Steve is the documentation lead for both this project and Plone, is improving iCalendar support in Plone's event content types, and maintains sphinxcontrib-httpdomain, used across the Python community for HTTP API documentation."
   packages:
     - Documentation
     - sphinxcontrib-httpdomain
