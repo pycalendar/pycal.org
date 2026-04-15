@@ -9,8 +9,8 @@ layout: default
       The standards compliant, integrated Python calendar packages
     </p>
     <div class="hero-actions">
-      <a href="/about" class="btn btn-secondary">About the project</a>
       <a href="/software" class="btn btn-primary">Browse software</a>
+      <a href="/about" class="btn btn-secondary">About the project</a>
     </div>
   </div>
 </header>
@@ -42,7 +42,7 @@ layout: default
       <div class="package-grid">
 
         {% for pkg in site.data.packages %}
-        {% if pkg.homepage_featured %}
+        {% if pkg.categories contains "featured" %}
         {% include package_card.html %}
         {% endif %}
         {% endfor %}

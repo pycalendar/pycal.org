@@ -5,80 +5,18 @@ eyebrow: Python Calendaring Ecosystem
 hero_sub: Everything we maintain. Badges show stability status.
 ---
 
-<section class="section">
+{% for cat in site.data.categories %}
+<section class="section{% if cat.alt %} section-alt{% endif %}">
   <div class="container">
-    <h2 class="section-title">Core</h2>
+    <h2 class="section-title" id="{{ cat.id }}"><a href="#{{ cat.id }}" class="section-anchor">{{ cat.title }} <span class="section-anchor-icon">🔗</span></a></h2>
+    <p class="section-desc">{{ cat.description }}</p>
     <div class="package-grid">
       {% for pkg in site.data.packages %}
-      {% if pkg.categories contains "core" %}
+      {% if pkg.categories contains cat.id %}
       {% include package_card.html %}
       {% endif %}
       {% endfor %}
     </div>
   </div>
 </section>
-
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Utilities</h2>
-    <div class="package-grid">
-      {% for pkg in site.data.packages %}
-      {% if pkg.categories contains "utilities" %}
-      {% include package_card.html %}
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Client/server communication</h2>
-    <div class="package-grid">
-      {% for pkg in site.data.packages %}
-      {% if pkg.categories contains "client-server" %}
-      {% include package_card.html %}
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Applications</h2>
-    <div class="package-grid">
-      {% for pkg in site.data.packages %}
-      {% if pkg.categories contains "applications" %}
-      {% include package_card.html %}
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Tooling</h2>
-    <div class="package-grid package-grid--two">
-      {% for pkg in site.data.packages %}
-      {% if pkg.categories contains "tooling" %}
-      {% include package_card.html %}
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Integrations</h2>
-    <div class="package-grid package-grid--two">
-      {% for pkg in site.data.packages %}
-      {% if pkg.categories contains "integrations" %}
-      {% include package_card.html %}
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% endfor %}
