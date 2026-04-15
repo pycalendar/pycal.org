@@ -2,7 +2,7 @@
   url: https://icalendar.readthedocs.io/
   badge: stable
   badge_label: Stable
-  description: "RFC 5545 parser and generator for .ics files. The foundation every other package in this ecosystem builds on."
+  description: "RFC 5545 parser and generator for iCalendar files. The foundation for every other package in this ecosystem."
   categories:
     - featured
     - cli
@@ -21,7 +21,7 @@
   url: https://recurring-ical-events.readthedocs.io/
   badge: stable
   badge_label: Stable
-  description: "Give it a calendar and a date range, get back every occurrence; exceptions and overrides included. Used by Nextcloud, Thunderbird, and Android."
+  description: "Give it a calendar and a date range, get back every occurrence, exceptions and overrides included."
   categories:
     - featured
     - lib
@@ -30,7 +30,7 @@
   url: https://github.com/pycalendar/icalendar-searcher
   badge: stable
   badge_label: Stable
-  description: "Client-side search and filtering for iCalendar data, for when the server doesn't support the query you need."
+  description: "Client-side search and filtering for iCalendar data for when the server doesn't support the query you need."
   categories:
     - lib
     - cli
@@ -48,7 +48,7 @@
   url: https://pypi.org/project/x-wr-timezone/
   badge: stable
   badge_label: Stable
-  description: "Fixes the non-standard X-WR-TIMEZONE property that Google Calendar exports, so .ics files work correctly in strict parsers."
+  description: "Fixes the non-standard X-WR-TIMEZONE property that Google Calendar exports, so iCalendar files work correctly in strict parsers."
   categories:
     - lib
     - cli
@@ -57,7 +57,7 @@
   url: https://github.com/niccokunzmann/ics-query
   badge: stable
   badge_label: Stable
-  description: "Query .ics files by time range and component type from the command line. Outputs valid .ics. Available via Homebrew, Windows .exe, or pip."
+  description: "Query iCalendar files by time range and component type from the command line. Outputs valid iCalendar files. Available via Homebrew, Windows, or Python package managers."
   categories:
     - cli
 
@@ -65,7 +65,7 @@
   url: https://github.com/niccokunzmann/ical2jcal
   badge: stable
   badge_label: Stable
-  description: "Converts between iCalendar (RFC 5545, .ics) and jCal (RFC 7265, JSON) formats. Available as a Python library and CLI."
+  description: "Converts between iCalendar (RFC 5545) and jCal (RFC 7265, JSON) formats. Available as a Python library and CLI."
   categories:
     - cli
 
@@ -73,7 +73,7 @@
   url: https://github.com/pycalendar/calendaring-jmap
   badge: planned
   badge_label: Planned
-  description: "JMAP calendar support as a standalone package: scheduling, free/busy, attachments, push notifications. Currently part of python-caldav, being extracted here."
+  description: "JMAP calendar support as a standalone package, including scheduling, free/busy, attachments, and push notifications. Currently part of python-caldav, being extracted here."
   categories:
     - client-server
 
@@ -81,7 +81,7 @@
   url: https://github.com/pycalendar/calendaring-client
   badge: planned
   badge_label: Planned
-  description: "One API for CalDAV, JMAP, and plain .ics feeds. Point it at a URL and it figures out the rest."
+  description: "One API for CalDAV, JMAP, and plain iCalendar feeds. Point it at a URL, and it figures out the rest."
   categories:
     - client-server
     - lib
@@ -118,7 +118,7 @@
   url: https://github.com/python-caldav/caldav-server-tester
   badge: stable
   badge_label: Stable
-  description: "Point it at a CalDAV server and get a full report of what it actually supports, not just what the docs claim."
+  description: "Point it at a CalDAV server and get a full report of what it actually supports, not just what the documentation claims."
   categories:
     - cli
     - client-server
@@ -127,7 +127,7 @@
   url: https://django-icalendar.readthedocs.io/
   badge: poc
   badge_label: Proof of concept
-  description: "Django models for iCalendar data: events, recurrences, attendees, and admin integration out of the box."
+  description: "Django models for iCalendar data, including events, recurrences, attendees, and admin integration out of the box."
   categories:
     - lib
 

@@ -2,7 +2,7 @@
   github: niccokunzmann
   linkedin:
   avatar: NK
-  bio: "Nicco holds this together. He maintains more packages than anyone else, reviews code across the whole ecosystem, brought most of this team together, and is the primary contact for NLnet. The coordinated effort you see here is largely his doing."
+  bio: "Nicco holds this together. He maintains the most packages amongst the team, reviews code across the whole ecosystem, brought most of this team together, and is the primary contact for NLnet. The coordinated effort you see here is largely his doing."
   packages:
     - icalendar
     - recurring-ical-events
@@ -43,7 +43,7 @@
   github: stevepiercy
   linkedin:
   avatar: SP
-  bio: "Steve leads docs for this project and for Plone, is bringing iCalendar support to Plone's event content types, and maintains sphinxcontrib-httpdomain, used across the Python documentation community for REST API docs."
+  bio: "Steve is the documentation lead for both this project and Plone, is improving iCalendar support in Plone's event content types, and maintains sphinxcontrib-httpdomain, used across the Python community for HTTP API documentation."
   packages:
     - Documentation
     - sphinxcontrib-httpdomain
