@@ -1,0 +1,24 @@
+- id: featured
+  title: Featured Software
+  description: "These are the most widely used software we maintain."
+  alt: false
+
+- id: user
+  title: End User Applications
+  description: Applications for calendar users, not just developers.
+  alt: true
+
+- id: cli
+  title: Command Line Applications
+  description: "Cross-platform command line tools for working with calendars and different protocols."
+  alt: true
+
+- id: client-server
+  title: Web Apps and Clients
+  description: "Web applications and web based services."
+  alt: false
+
+- id: lib
+  title: Libraries
+  description: "Python libraries for your applications."
+  alt: false
