@@ -1,0 +1,11 @@
+project:
+  - label: About
+    url: /about
+  - label: Software
+    url: /software
+  - label: Team
+    url: /team
+  - label: AI policy
+    url: /ai-policy
+  - label: Code of Conduct
+    url: /code-of-conduct
