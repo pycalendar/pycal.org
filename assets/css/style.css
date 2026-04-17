@@ -19,6 +19,8 @@
   --ink: #111110;
   --accent: #0f766e;
   --accent-hover: #0b5952;
+  --border: var(--stone-200);
+  --border-strong: var(--stone-400);
   --dev-accent: #6d28d9;
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -921,7 +923,7 @@ footer {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  border: 1px solid var(--stone-300);
+  border: 1px solid var(--border);
   background: var(--stone-50);
   color: var(--stone-600);
   font-size: 1.1rem;
@@ -935,5 +937,5 @@ footer {
 .back-to-top:hover {
   background: var(--stone-100);
   color: var(--stone-900);
-  border-color: var(--stone-400);
+  border-color: var(--border-strong);
 }

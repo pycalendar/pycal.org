@@ -1,0 +1,4 @@
+{%- assign level = include.level | default: 2 -%}
+{%- assign id = include.id | default: include.title | slugify -%}
+{%- assign class = include.class -%}
+<h{{ level }} id="{{ id }}"{% if class %} class="{{ class }}"{% endif %}><a href="#{{ id }}" class="heading-anchor">#</a>{{ include.title }}</h{{ level }}>
