@@ -1,14 +1,13 @@
 ---
 layout: page
 title: Software
-eyebrow: Python Calendaring Ecosystem
 hero_sub: Everything we maintain. Badges show stability status.
 ---
 
 {% for cat in site.data.categories %}
 <section class="section{% if cat.alt %} section-alt{% endif %}">
   <div class="container">
-    <h2 class="section-title" id="{{ cat.id }}"><a href="#{{ cat.id }}" class="section-anchor">{{ cat.title }} <span class="section-anchor-icon">🔗</span></a></h2>
+    {% include heading.html title=cat.title id=cat.id class="section-title" %}
     <p class="section-desc">{{ cat.description }}</p>
     <div class="package-grid">
       {% for pkg in site.data.packages %}
