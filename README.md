@@ -6,11 +6,13 @@ Source for [pycal.org](https://pycal.org) — the Python Calendaring Ecosystem w
 
 - [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 3.4+
 - [Bundler](https://bundler.io/)
+- [pre-commit](https://pre-commit.com/)
 
 ## Setup
 
 ```sh
 bundle install
+pre-commit install
 ```
 
 ## Local development
@@ -24,4 +26,3 @@ Open <http://localhost:4000>.
 ## Deployment
 
 Pushes to `main` are automatically built and deployed to GitHub Pages.
-
