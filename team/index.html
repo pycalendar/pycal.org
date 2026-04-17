@@ -14,9 +14,9 @@ hero_sub: Small team, deep specifications, real servers. We welcome new contribu
         <div class="member-avatar">{{ member.avatar }}</div>
         <div class="member-info">
           <div class="member-header">
-            <h2 class="member-name">{{ member.name }}</h2>
-            <a href="https://github.com/{{ member.github }}" class="member-github" target="_blank" rel="noopener">@{{
-              member.github }}</a>
+            {% assign slug = member.name | slugify %}
+            <h2 class="member-name" id="{{ slug }}"><a href="#{{ slug }}" class="heading-anchor">#</a>{{ member.name }}</h2>
+            <a href="https://github.com/{{ member.github }}" class="member-github" target="_blank" rel="noopener">GitHub</a>
             {% if member.linkedin %}
             <a href="{{ member.linkedin }}" class="member-linkedin" target="_blank" rel="noopener">LinkedIn</a>
             {% endif %}

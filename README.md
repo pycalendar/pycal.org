@@ -1,6 +1,6 @@
 # pycal.org
 
-Source for [pycal.org](https://pycal.org) — the Python Web Calendaring Ecosystem website. Built with [Jekyll](https://jekyllrb.com/).
+Source for [pycal.org](https://pycal.org) — the Python Calendaring Ecosystem website. Built with [Jekyll](https://jekyllrb.com/).
 
 ## Prerequisites
 

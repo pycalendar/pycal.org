@@ -17,8 +17,8 @@
   --stone-800: #292724;
   --stone-900: #1a1917;
   --ink: #111110;
-  --accent: #1a56db;
-  --accent-hover: #1447c0;
+  --accent: #0f766e;
+  --accent-hover: #0b5952;
   --dev-accent: #6d28d9;
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -34,6 +34,32 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+}
+
+:target,
+h1[id],
+h2[id],
+h3[id],
+h4[id] {
+  scroll-margin-top: 5rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--stone-900);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--stone-900);
+  color: var(--stone-50);
+}
+
+.prose a[target="_blank"]::after,
+.overview-prose a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.85em;
+  opacity: 0.7;
 }
 
 /* Custom scrollbar — Webkit */
@@ -274,8 +300,6 @@ main {
 
 .section-alt {
   background: var(--stone-50);
-  border-top: 1px solid var(--stone-200);
-  border-bottom: 1px solid var(--stone-200);
 }
 
 .section-title {
@@ -288,31 +312,19 @@ main {
   scroll-margin-top: 80px;
 }
 
-.section-anchor {
-  color: inherit;
+.heading-anchor,
+.prose .heading-anchor {
+  color: var(--stone-400);
   text-decoration: none;
+  margin-right: 0.4em;
+  font-weight: 400;
+  transition: color 0.15s;
 }
 
-.section-anchor:hover {
+.heading-anchor:hover,
+.prose .heading-anchor:hover {
+  color: var(--stone-600);
   text-decoration: none;
-  color: inherit;
-}
-
-.section-anchor:hover .section-anchor-icon {
-  opacity: 1;
-}
-
-.section-anchor-icon {
-  width: 0.9em;
-  height: 0.9em;
-  margin-left: 0.4em;
-  vertical-align: middle;
-  opacity: 0;
-  transition: opacity 0.15s;
-}
-
-.section-title:hover .section-anchor-icon {
-  opacity: 1;
 }
 
 .section-desc {
@@ -362,12 +374,14 @@ main {
   background: var(--white);
   text-decoration: none;
   color: inherit;
-  transition: background 0.12s;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
 }
 
 .package:hover {
   background: var(--stone-50);
   text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
 }
 
 .package--dev {
@@ -552,10 +566,20 @@ code {
   margin-bottom: 0;
 }
 
-.prose a {
-  color: var(--accent);
+.prose a,
+.overview-prose a,
+.see-all a {
+  color: var(--stone-900);
   text-decoration: underline;
   text-underline-offset: 2px;
+  text-decoration-color: var(--stone-400);
+  transition: text-decoration-color 0.15s;
+}
+
+.prose a:hover,
+.overview-prose a:hover,
+.see-all a:hover {
+  text-decoration-color: var(--stone-900);
 }
 
 .spec-list {
@@ -653,7 +677,7 @@ code {
 
 .member-github:hover,
 .member-linkedin:hover {
-  color: var(--accent);
+  color: var(--stone-900);
   text-decoration: none;
 }
 
@@ -661,6 +685,18 @@ code {
   font-size: 0.9rem;
   color: var(--stone-600);
   line-height: 1.75;
+}
+
+.member-bio a {
+  color: var(--stone-900);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--stone-400);
+  transition: text-decoration-color 0.15s;
+}
+
+.member-bio a:hover {
+  text-decoration-color: var(--stone-900);
 }
 
 .member-packages {
@@ -876,4 +912,28 @@ footer {
   .nav-toggle:checked+.nav-toggle-label span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--stone-300);
+  background: var(--stone-50);
+  color: var(--stone-600);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  z-index: 100;
+}
+
+.back-to-top:hover {
+  background: var(--stone-100);
+  color: var(--stone-900);
+  border-color: var(--stone-400);
 }

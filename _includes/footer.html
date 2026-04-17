@@ -9,7 +9,6 @@
         <h4>Project</h4>
         <ul>
           {% unless page.url contains "/about" %}<li><a href="/about">About</a></li>{% endunless %}
-          {% unless page.url == "/" %}<li><a href="/">Home</a></li>{% endunless %}
           {% unless page.url contains "/software" %}<li><a href="/software">Software</a></li>{% endunless %}
           {% unless page.url contains "/team" %}<li><a href="/team">Team</a></li>{% endunless %}
           {% unless page.url contains "/ai-policy" %}<li><a href="/ai-policy">AI policy</a></li>{% endunless %}
@@ -27,7 +26,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Python Web Calendaring Ecosystem.</p>
+      <p>{{ site.title }}.</p>
     </div>
   </div>
 </footer>

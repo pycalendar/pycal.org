@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-eyebrow: Python Calendaring Ecosystem
 hero_sub: The boring yet important stuff.
 ---
 
@@ -9,7 +8,7 @@ hero_sub: The boring yet important stuff.
   <div class="container">
     <div class="prose">
 
-      <h2>What this is</h2>
+      <h2 id="what-this-is"><a href="#what-this-is" class="heading-anchor">#</a>What this is</h2>
       <p>
         The Python Calendaring Ecosystem (PCE) is a collection of open source software written in Python covering the calendaring stack from top to bottom.
         PCE parses iCalendar files, computes recurrences, talks to CalDAV and JMAP servers, has CLI tools, and is integrated with Django.
@@ -17,7 +16,7 @@ hero_sub: The boring yet important stuff.
         The maintainers and contributors use parts of the PCE in real projects.
       </p>
 
-      <h2>Why it exists</h2>
+      <h2 id="why-it-exists"><a href="#why-it-exists" class="heading-anchor">#</a>Why it exists</h2>
       <p>
         Calendaring specifications are sometimes ambiguous, have omissions, and every server interprets them differently.
         Most Python libraries in this space don't handle recurrences according to the specifications, in ways that only show up in production, or just silently omit the hard parts.
@@ -26,14 +25,14 @@ hero_sub: The boring yet important stuff.
         We test against real servers, track compatibility per server, and fix what breaks.
       </p>
 
-      <h2>Standards we implement</h2>
+      <h2 id="standards"><a href="#standards" class="heading-anchor">#</a>Standards we implement</h2>
       <ul class="spec-list">
         {% for std in site.data.standards %}
         <li>{{ std.id }} — {{ std.name }}</li>
         {% endfor %}
       </ul>
 
-      <h2>Funding</h2>
+      <h2 id="funding"><a href="#funding" class="heading-anchor">#</a>Funding</h2>
       <p>
         Work for the PCE is funded by a generous grant from <a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a> via the
         <a href="https://nlnet.nl/NGI0" target="_blank" rel="noopener">NGI Zero program</a>,
@@ -51,7 +50,7 @@ hero_sub: The boring yet important stuff.
         You can support the work for the Python Calendaring Ecosystem through <a href="https://opencollective.com/python-icalendar" target="_blank" rel="noopener">financial contribution</a>.
       </p>
 
-      <h2>License and governance</h2>
+      <h2 id="license-and-governance"><a href="#license-and-governance" class="heading-anchor">#</a>License and governance</h2>
       <p>
         All packages are free and open source software. Licenses vary by package, including BSD, LGPL, GPL, AGPL, and Apache 2.0.
         There is no foundation, nor formal structure.
