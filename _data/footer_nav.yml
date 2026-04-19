@@ -1,0 +1,21 @@
+project:
+  - label: About
+    url: /about
+  - label: Software
+    url: /software
+  - label: Team
+    url: /team
+  - label: AI policy
+    url: /ai-policy
+  - label: Code of Conduct
+    url: /code-of-conduct
+
+community:
+  - label: GitHub
+    url: https://github.com/pycalendar
+  - label: NLnet
+    url: https://nlnet.nl
+  - label: PyPI
+    url: https://pypi.org/search/?q=icalendar
+  - label: Funding
+    url: https://opencollective.com/python-icalendar

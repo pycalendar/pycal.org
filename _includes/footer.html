@@ -8,20 +8,17 @@
       <div class="footer-col">
         <h4>Project</h4>
         <ul>
-          {% unless page.url contains "/about" %}<li><a href="/about">About</a></li>{% endunless %}
-          {% unless page.url contains "/software" %}<li><a href="/software">Software</a></li>{% endunless %}
-          {% unless page.url contains "/team" %}<li><a href="/team">Team</a></li>{% endunless %}
-          {% unless page.url contains "/ai-policy" %}<li><a href="/ai-policy">AI policy</a></li>{% endunless %}
-          {% unless page.url contains "/code-of-conduct" %}<li><a href="/code-of-conduct">Code of Conduct</a></li>{% endunless %}
+          {% for item in site.data.footer_nav.project %}
+            {% unless page.url contains item.url %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endunless %}
+          {% endfor %}
         </ul>
       </div>
       <div class="footer-col">
         <h4>Community</h4>
         <ul>
-          <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://nlnet.nl" target="_blank" rel="noopener">NLnet</a></li>
-          <li><a href="https://pypi.org/search/?q=icalendar" target="_blank" rel="noopener">PyPI</a></li>
-          <li><a href="https://opencollective.com/python-icalendar" target="_blank" rel="noopener">Funding</a></li>
+          {% for item in site.data.footer_nav.community %}
+            <li><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </div>
