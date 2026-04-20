@@ -1,0 +1,25 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Python Calendaring Ecosystem Software",
+  "description": "Open source Python packages for working with calendars, iCalendar, CalDAV, and JMAP.",
+  "itemListElement": [
+    {%- for pkg in site.data.packages -%}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "{{ pkg.name }}",
+        "url": "{{ pkg.url }}",
+        "description": {{ pkg.description | jsonify }},
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Cross-platform",
+        "programmingLanguage": "Python"
+      }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>

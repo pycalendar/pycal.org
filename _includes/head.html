@@ -1,11 +1,34 @@
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign full_title = page_title -%}
+{%- if page.title -%}{%- assign full_title = page.title | append: ' | ' | append: site.title -%}{%- endif -%}
+{%- assign description = page.description | default: site.description -%}
+{%- assign og_image = page.og_image | default: '/assets/og-default.png' | absolute_url -%}
+{%- assign canonical = page.url | absolute_url -%}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
-  rel="stylesheet">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ full_title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ full_title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ og_image }}">
+
+<link rel="icon" href="/assets/favicon.png" type="image/png">
 <meta name="theme-color" content="#f8f7f4">
+
+<link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/playfair-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <link rel="stylesheet" href="/assets/css/style.css">

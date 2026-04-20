@@ -11,6 +11,9 @@ gem "webrick"
 gem "logger"
 gem "ostruct"
 
+group :jekyll_plugins do
+  gem "jekyll-sitemap", "~> 1.4"
+end
 
 # Windows timezone data
 gem "tzinfo-data", platforms: [:windows, :jruby]
