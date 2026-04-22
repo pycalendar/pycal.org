@@ -10,7 +10,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/pycalendar/ai-prompt-auto-commit
-    rev: v0.0.6
+    rev: v0.0.8
     hooks:
       - id: prepare-ai-repository
       - id: unstage-ai-prompts
