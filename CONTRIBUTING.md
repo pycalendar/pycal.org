@@ -1,7 +1,6 @@
-# Contribution Guide
+# Contribution guide
 
-To get started with development,
-[read the documentation](README.md).
+To get started with development, [read the documentation](README.md).
 
 ## Maintainers
 
@@ -21,9 +20,9 @@ They can:
 
 Maintainers need access to:
 
-- github (invite admin)
+- GitHub (invite admin)
 
-## Contributions
+## Contributor permissions
 
 Contributors
 
@@ -32,7 +31,7 @@ Contributors
 
 ## Merge requirements
 
-- Passing tests
+- Tests pass
 - Documentation builds successfully and passes checks. Any changes to documentation should render correctly in the pull request preview on Read the Docs.
 - A change log entry is included, except for trivial matters, such as typographical errors and updating links. Preferably, this would be enforced through CI.
 - All conversations should be addressed and resolved.
