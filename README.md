@@ -18,7 +18,7 @@ pre-commit install
 ## Local development
 
 ```sh
-bundle exec jekyll serve
+bundle exec jekyll serve --watch
 ```
 
 Open <http://localhost:4000>.
