@@ -12,7 +12,9 @@ description: "The maintainers behind the Python Calendaring Ecosystem. Meet the 
 
       {% for member in site.data.team %}
       <div class="member-card">
-        <div class="member-avatar">{{ member.avatar }}</div>
+        <div class="member-avatar">
+          <img src="https://github.com/{{ member.github }}.png" alt="{{ member.name }} avatar" loading="lazy" width="48" height="48">
+        </div>
         <div class="member-info">
           <div class="member-header">
             {% include heading.html title=member.name class="member-name" %}
