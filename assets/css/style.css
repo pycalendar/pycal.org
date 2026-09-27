@@ -210,6 +210,17 @@ header.header--slim {
   padding: 4rem 0 3.5rem;
 }
 
+header.header--fill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+}
+
+header.header--fill .container {
+  width: 100%;
+}
+
 .eyebrow {
   font-size: 0.72rem;
   font-weight: 600;
