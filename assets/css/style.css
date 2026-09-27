@@ -670,7 +670,8 @@ code {
 }
 
 .member-github,
-.member-linkedin {
+.member-linkedin,
+.member-mastodon {
   font-size: 0.8rem;
   font-family: var(--font-mono);
   color: var(--stone-400);
@@ -678,7 +679,8 @@ code {
 }
 
 .member-github:hover,
-.member-linkedin:hover {
+.member-linkedin:hover,
+.member-mastodon:hover {
   color: var(--stone-900);
   text-decoration: none;
 }
