@@ -12,8 +12,14 @@ description: "The maintainers behind the Python Calendaring Ecosystem. Meet the 
 
       {% for member in site.data.team %}
       <div class="member-card">
+        {%- assign avatar_path = "/assets/img/team/" | append: member.github | append: ".jpg" -%}
+        {%- assign avatar_file = site.static_files | where: "path", avatar_path | first %}
         <div class="member-avatar">
-          <img src="https://github.com/{{ member.github }}.png" alt="{{ member.name }} avatar" loading="lazy" width="48" height="48">
+          {%- if avatar_file -%}
+          <img src="{{ avatar_path }}" alt="" loading="lazy" width="48" height="48">
+          {%- else -%}
+          {{ member.avatar }}
+          {%- endif -%}
         </div>
         <div class="member-info">
           <div class="member-header">
