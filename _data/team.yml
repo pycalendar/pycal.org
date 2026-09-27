@@ -1,6 +1,7 @@
 - name: Nicco Kunzmann
   github: niccokunzmann
   linkedin:
+  mastodon: https://toot.wales/@niccokunzmann
   avatar: NK
   bio: "Nicco holds this together. He maintains the most packages amongst the team, reviews code across the whole ecosystem, brought most of this team together, and is the primary contact for NLnet. The coordinated effort you see here is largely his doing."
   packages:
@@ -24,6 +25,7 @@
 - name: Sashank Bhamidi
   github: SashankBhamidi
   linkedin: https://www.linkedin.com/in/sashankbhamidi/
+  mastodon: https://fosstodon.org/@sashank
   avatar: SB
   bio: "Sashank is the Founder of BizCred and does open source on the side. He built JMAP calendar support into python-caldav from scratch, and maintains icalendar and icalendar-anonymizer."
   packages:
@@ -33,6 +35,7 @@
 - name: Abe Hanoka
   github: abe-101
   linkedin: https://linkedin.com/in/abe101
+  mastodon: https://fosstodon.org/@abe
   avatar: AH
   bio: "Abe runs <a href=\"https://mergecal.org/\" target=\"_blank\" rel=\"noopener\">MergeCal.org</a> and <a href=\"https://myhebrewdates.com/\" target=\"_blank\" rel=\"noopener\">MyHebrewDates.com</a> on these packages, which means he hits the bugs that only show up at scale. He maintains python-mergecal and django-icalendar, and is also a maintainer of dj-stripe."
   packages:
@@ -42,6 +45,7 @@
 - name: Steve Piercy
   github: stevepiercy
   linkedin:
+  mastodon: https://fosstodon.org/@stevepiercy
   avatar: SP
   bio: "Steve is the documentation lead for both this project and Plone, is improving iCalendar support in Plone's event content types, and maintains <a href=\"https://sphinxcontrib-httpdomain.readthedocs.io/en/stable/\" target=\"_blank\" rel=\"noopener\">sphinxcontrib-httpdomain</a>, used across the Python community for HTTP API documentation."
   packages:

@@ -22,6 +22,9 @@ description: "The maintainers behind the Python Calendaring Ecosystem. Meet the 
             {% if member.linkedin %}
             <a href="{{ member.linkedin }}" class="member-linkedin" target="_blank" rel="noopener">LinkedIn</a>
             {% endif %}
+            {% if member.mastodon %}
+            <a href="{{ member.mastodon }}" class="member-mastodon" target="_blank" rel="noopener">Mastodon</a>
+            {% endif %}
           </div>
           <p class="member-bio">{{ member.bio }}</p>
           <div class="member-packages">
