@@ -1,7 +1,27 @@
+# Jekyll build output and caches
 _site/
 .jekyll-cache/
 .jekyll-metadata
 .sass-cache/
+
+# Ruby / Bundler
 Gemfile.lock
 vendor/
+.bundle/
+
+# AI prompt logs (archived into commits by ai-prompt-auto-commit)
 /.prompts/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local environment
+.env
