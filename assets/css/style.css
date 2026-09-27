@@ -438,6 +438,12 @@ main {
   border-color: var(--stone-200);
 }
 
+.badge--planned {
+  background: #eff6ff;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
 .badge--sunset {
   background: #fef2f2;
   color: #991b1b;
@@ -685,6 +691,40 @@ code {
   text-decoration: none;
 }
 
+.img-inline {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -0.25em;
+  opacity: 0.45;
+}
+
+a:hover .img-inline {
+  opacity: 0.9;
+}
+
+.footer-license-icons {
+  white-space: nowrap;
+}
+
+.footer-license img {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+  vertical-align: -0.125em;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.footer-social .img-inline {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 .member-bio {
   font-size: 0.9rem;
   color: var(--stone-600);
@@ -732,7 +772,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2.5rem;
 }
