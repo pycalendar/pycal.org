@@ -13,6 +13,9 @@ project:
 community:
   - label: GitHub
     url: https://github.com/pycalendar
+  - label: Mastodon
+    url: https://fosstodon.org/@pycal
+    rel: me
   - label: NLnet
     url: https://nlnet.nl
   - label: PyPI
