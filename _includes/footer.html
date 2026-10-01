@@ -4,27 +4,30 @@
       <div class="footer-brand">
         <a href="/" class="footer-logo">pycal</a>
         <p>A home for Python calendaring.<br>Software, tools, and specifications maintained in the open.</p>
-        <p>
+        <p class="footer-license">
           This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
-          <img src="/assets/img/license/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/license/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="/assets/img/license/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+          <span class="footer-license-icons"><img src="/assets/img/license/cc.svg" alt=""><img src="/assets/img/license/by.svg" alt=""><img src="/assets/img/license/sa.svg" alt=""></span>
         </p>
+        <ul class="footer-social">
+          {% for item in site.data.footer_nav.social %}
+            <li><a href="{{ item.url }}" target="_blank" rel="noopener{% if item.rel %} {{ item.rel }}{% endif %}">{% include icon.html name=item.icon alt=item.label %}</a></li>
+          {% endfor %}
+        </ul>
       </div>
+      {% for column in site.data.footer_nav.columns %}
       <div class="footer-col">
-        <h4>Project</h4>
+        <h4>{{ column.title }}</h4>
         <ul>
-          {% for item in site.data.footer_nav.project %}
+          {% for item in column.links %}
+            {% if item.url contains "://" %}
+            <li><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></li>
+            {% else %}
             {% unless page.url contains item.url %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endunless %}
+            {% endif %}
           {% endfor %}
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Community</h4>
-        <ul>
-          {% for item in site.data.footer_nav.community %}
-            <li><a href="{{ item.url }}" target="_blank" rel="noopener{% if item.rel %} {{ item.rel }}{% endif %}">{{ item.label }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
+      {% endfor %}
     </div>
     <div class="footer-bottom">
       <p>{{ site.title }}.</p>

@@ -24,12 +24,12 @@ description: "The maintainers behind the Python Calendaring Ecosystem. Meet the 
         <div class="member-info">
           <div class="member-header">
             {% include heading.html title=member.name class="member-name" %}
-            <a href="https://github.com/{{ member.github }}" class="member-github" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/{{ member.github }}" class="member-github" target="_blank" rel="noopener">{% include icon.html name="github" alt="GitHub" %}</a>
             {% if member.linkedin %}
-            <a href="{{ member.linkedin }}" class="member-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="{{ member.linkedin }}" class="member-linkedin" target="_blank" rel="noopener">{% include icon.html name="linkedin" alt="LinkedIn" %}</a>
             {% endif %}
             {% if member.mastodon %}
-            <a href="{{ member.mastodon }}" class="member-mastodon" target="_blank" rel="noopener">Mastodon</a>
+            <a href="{{ member.mastodon }}" class="member-mastodon" target="_blank" rel="noopener">{% include icon.html name="mastodon" alt="Mastodon" %}</a>
             {% endif %}
           </div>
           <p class="member-bio">{{ member.bio }}</p>

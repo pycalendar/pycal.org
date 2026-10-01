@@ -210,6 +210,17 @@ header.header--slim {
   padding: 4rem 0 3.5rem;
 }
 
+header.header--fill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+}
+
+header.header--fill .container {
+  width: 100%;
+}
+
 .eyebrow {
   font-size: 0.72rem;
   font-weight: 600;
@@ -438,6 +449,12 @@ main {
   border-color: var(--stone-200);
 }
 
+.badge--planned {
+  background: #eff6ff;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
 .badge--sunset {
   background: #fef2f2;
   color: #991b1b;
@@ -463,47 +480,14 @@ code {
   border-radius: 3px;
 }
 
-/* NLnet banner */
-
-.nlnet-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 2.5rem;
-  background: var(--white);
-  border: 1px solid var(--stone-200);
-  border-radius: var(--radius);
-}
-
-.nlnet-label {
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--stone-400);
-  margin-bottom: 0.3rem;
-}
-
-.nlnet-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 0.5rem;
-}
-
-.nlnet-desc {
-  font-size: 0.875rem;
-  color: var(--stone-600);
-  line-height: 1.65;
-}
+/* NLnet logos */
 
 .nlnet-logos {
+  margin: 1.5rem 0;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .nlnet-logos a {
@@ -512,29 +496,22 @@ code {
   transition: opacity 0.15s;
 }
 
+.prose .nlnet-logos a {
+  text-decoration: none;
+}
+
+.prose .nlnet-logos a::after {
+  content: none;
+}
+
 .nlnet-logos a:hover {
   opacity: 1;
-  text-decoration: none;
 }
 
 .nlnet-logos img {
   display: block;
   height: 40px;
   width: auto;
-}
-
-.nlnet-link {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--accent);
-  white-space: nowrap;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.nlnet-link:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
 }
 
 /* About page prose */
@@ -693,6 +670,40 @@ code {
   text-decoration: none;
 }
 
+.img-inline {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -0.25em;
+  opacity: 0.45;
+}
+
+a:hover .img-inline {
+  opacity: 0.9;
+}
+
+.footer-license-icons {
+  white-space: nowrap;
+}
+
+.footer-license img {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+  vertical-align: -0.125em;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.footer-social .img-inline {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 .member-bio {
   font-size: 0.9rem;
   color: var(--stone-600);
@@ -740,7 +751,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2.5rem;
 }
@@ -812,12 +823,6 @@ footer {
 
   .package-grid--two {
     grid-template-columns: 1fr;
-  }
-
-  .nlnet-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.75rem;
   }
 
   .footer-grid {
